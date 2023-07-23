@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo4"
+    android:alpha="0.9"
+    tools:context=".Consejos">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/header"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consejos"
+            android:textSize="50sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:scaleType="fitXY"
+            android:src="@drawable/consejo"
+            android:layout_weight="0"
+            />
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/ListVConsejos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
