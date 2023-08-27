@@ -7,8 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/fondo4"
     android:alpha="0.9"
-    tools:context=".Consejos">
-
+    tools:context=".usuarios">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -20,12 +19,11 @@
         android:orientation="horizontal"
         android:padding="20dp"
         >
-
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Consejos"
-            android:textSize="50sp"
+            android:layout_height="60sp"
+            android:text="Usuarios"
+            android:textSize="30sp"
             android:textColor="@color/white"
             android:gravity="center"
             android:layout_weight="1"
@@ -34,7 +32,7 @@
             android:layout_width="60sp"
             android:layout_height="60sp"
             android:scaleType="fitXY"
-            android:src="@drawable/consejo"
+            android:src="@drawable/usuario"
             android:layout_weight="0"
             />
 
@@ -46,7 +44,7 @@
         android:layout_margin="10dp"
         >
         <TableLayout
-            android:id="@+id/tablaConsejos"
+            android:id="@+id/tablaUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:stretchColumns="*"
@@ -54,4 +52,6 @@
 
         </TableLayout>
     </LinearLayout>
+
+
 </LinearLayout>

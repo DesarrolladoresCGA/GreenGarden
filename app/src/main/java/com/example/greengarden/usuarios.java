@@ -14,14 +14,18 @@ import android.widget.TextView;
 
 import java.io.IOException;
 
-public class Consejos extends AppCompatActivity {
+public class usuarios extends AppCompatActivity {
+
     TableLayout tableLayout;
+
+    String[] nombresCeldas = {"ID", "Nombre", "Usuario", "Correo", "Contraseña"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consejos);
+        setContentView(R.layout.activity_usuarios);
 
-        tableLayout = findViewById(R.id.tablaConsejos);
+        tableLayout = findViewById(R.id.tablaUsuario);
 
         tableLayout.removeAllViews();
 
@@ -37,15 +41,16 @@ public class Consejos extends AppCompatActivity {
 
         SQLiteDatabase db = ddbb.getReadableDatabase();
 
-        String[] columnas = {"TipoConsejo", "Descripcion"};
+        String[] columnas = {"id", "nombre", "usuario", "correo"};
 
-        Cursor cursor = db.query("concejos", columnas, null, null, null, null, null);
+        Cursor cursor = db.query("usuarios", columnas, null, null, null, null, null);
 
         TableRow headerRow = new TableRow(this);
 
+
         tableLayout.addView(headerRow);
         GradientDrawable border = new GradientDrawable();
-        border.setStroke(1, Color.WHITE);
+        border.setStroke(1, Color.WHITE); // Establecer el grosor y color del borde
         border.setCornerRadius(1);
 
         for (String columna : columnas) {
@@ -56,6 +61,7 @@ public class Consejos extends AppCompatActivity {
             headerTextView.setBackground(border);
             headerTextView.setGravity(Gravity.CENTER);
         }
+
         while (cursor.moveToNext()) {
             TableRow tableRow = new TableRow(this);
 
@@ -73,6 +79,5 @@ public class Consejos extends AppCompatActivity {
 
         cursor.close();
         db.close();
-
     }
 }

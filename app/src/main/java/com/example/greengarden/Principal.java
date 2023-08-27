@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 
 public class Principal extends AppCompatActivity {
 
-    LinearLayout lnlEstadisticas, lnlCategorias, lnlConsejos;
+    LinearLayout lnlEstadisticas, lnlCategorias, lnlConsejos, lnlUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class Principal extends AppCompatActivity {
         lnlEstadisticas = findViewById(R.id.lnlEstadisticas);
         lnlCategorias = findViewById(R.id.lnlCategorias);
         lnlConsejos = findViewById(R.id.lnlConsejos);
+        lnlUsuario = findViewById(R.id.lnlUsuarios);
 
         lnlEstadisticas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,13 @@ public class Principal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Principal.this, Consejos.class);
+                startActivity(intent);
+            }
+        });
+        lnlUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Principal.this, usuarios.class);
                 startActivity(intent);
             }
         });

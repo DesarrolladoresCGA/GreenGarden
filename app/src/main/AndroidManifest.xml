@@ -16,6 +16,12 @@
         android:theme="@style/Theme.GreenGarden"
         tools:targetApi="31">
         <activity
+            android:name=".Recomendaciones"
+            android:exported="false" />
+        <activity
+            android:name=".usuarios"
+            android:exported="false" />
+        <activity
             android:name=".Luz"
             android:exported="false" />
         <activity

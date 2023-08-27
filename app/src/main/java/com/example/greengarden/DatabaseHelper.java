@@ -6,6 +6,8 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.Toast;
 
 import java.io.FileOutputStream;
@@ -132,4 +134,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return resultado;
     }
+
 }
